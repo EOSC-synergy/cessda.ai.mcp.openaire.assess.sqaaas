@@ -15,58 +15,58 @@ sqa_criteria:
     repos:
       github.com/cessda/cessda.ai.mcp.openaire git:
         commands:
-        - /usr/bin/env sh .sqa/script.daffodil_lucky_chipmunk.sh
-        container: qc.acc_periwinkle_dreamy_kookaburra
+        - /usr/bin/env sh .sqa/script.tangerine_bubbly_stork.sh
+        container: qc.acc_teal_attentive_coyote
   QC.Doc:
     repos:
       github.com/cessda/cessda.ai.mcp.openaire find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.ceru_peaceful_toad.sh
-        container: qc.doc_brown_whimsical_toad
+        - /usr/bin/env sh .sqa/script.purple_happy_giraffe.sh
+        container: qc.doc_magenta_rustic_cormorant
       github.com/cessda/cessda.ai.mcp.openaire git:
         commands:
-        - /usr/bin/env sh .sqa/script.puce_careful_seahorse.sh
-        container: qc.doc_ecru_goofy_otter
+        - /usr/bin/env sh .sqa/script.jasmine_insightful_unicorn.sh
+        container: qc.doc_malachite_goofy_bullfrog
       github.com/cessda/cessda.ai.mcp.openaire markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.mist_flexible_wombat.sh
-        container: qc.doc_pineapple_sweet_boar
+        - /usr/bin/env sh .sqa/script.khaki_fearless_hawk.sh
+        container: qc.doc_turquoise_vigilant_stork
   QC.Lic:
     repos:
       github.com/cessda/cessda.ai.mcp.openaire licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.gamboge_patient_wolf.sh
-        container: qc.lic_bluebell_reliable_grasshopper
+        - /usr/bin/env sh .sqa/script.turmeric_fierce_hare.sh
+        container: qc.lic_wheat_motivated_albatross
   QC.Sec:
     repos:
       github.com/cessda/cessda.ai.mcp.openaire bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.cadet_apprehensive_pegasus.sh
-        container: qc.sec_tangerine_loving_otter
+        - /usr/bin/env sh .sqa/script.champagne_reserved_barracuda.sh
+        container: qc.sec_royal_happy_capybara
   QC.Sty:
     repos:
       github.com/cessda/cessda.ai.mcp.openaire flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.emerald_mysterious_eel.sh
-        container: qc.sty_ruby_spontaneous_crow
+        - /usr/bin/env sh .sqa/script.saffron_savvy_finch.sh
+        container: qc.sty_strawberry_ambitious_dugong
       github.com/cessda/cessda.ai.mcp.openaire hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.storm_imaginative_pangolin.sh
-        container: qc.sty_jasmine_clever_caiman
+        - /usr/bin/env sh .sqa/script.lime_imaginative_squid.sh
+        container: qc.sty_bone_focused_squid
       github.com/cessda/cessda.ai.mcp.openaire jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.obsidian_cheerful_owl.sh
-        container: qc.sty_cinnamon_eager_grasshopper
+        - /usr/bin/env sh .sqa/script.butter_bright_cheetah.sh
+        container: qc.sty_thunder_trustworthy_kangaroo
   QC.Uni:
     repos:
       github.com/cessda/cessda.ai.mcp.openaire pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.glacier_funny_impala.sh
-        container: qc.uni_fandango_vibrant_quoll
+        - /usr/bin/env sh .sqa/script.sand_bewildered_skunk.sh
+        container: qc.uni_fog_aware_antelope
   QC.Ver:
     repos:
       github.com/cessda/cessda.ai.mcp.openaire get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.khaki_unique_mandrill.sh
-        container: qc.ver_persimmon_sympathetic_chameleon
+        - /usr/bin/env sh .sqa/script.orchid_dramatic_uakari.sh
+        container: qc.ver_ivory_flexible_opossum
 timeout: 5400
