@@ -1,0 +1,72 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: fix/updatego
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/cessda/cessda.ai.mcp.openaire:
+      branch: main
+      repo: https://github.com/cessda/cessda.ai.mcp.openaire
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/cessda/cessda.ai.mcp.openaire git:
+        commands:
+        - /usr/bin/env sh .sqa/script.daffodil_lucky_chipmunk.sh
+        container: qc.acc_periwinkle_dreamy_kookaburra
+  QC.Doc:
+    repos:
+      github.com/cessda/cessda.ai.mcp.openaire find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.ceru_peaceful_toad.sh
+        container: qc.doc_brown_whimsical_toad
+      github.com/cessda/cessda.ai.mcp.openaire git:
+        commands:
+        - /usr/bin/env sh .sqa/script.puce_careful_seahorse.sh
+        container: qc.doc_ecru_goofy_otter
+      github.com/cessda/cessda.ai.mcp.openaire markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.mist_flexible_wombat.sh
+        container: qc.doc_pineapple_sweet_boar
+  QC.Lic:
+    repos:
+      github.com/cessda/cessda.ai.mcp.openaire licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.gamboge_patient_wolf.sh
+        container: qc.lic_bluebell_reliable_grasshopper
+  QC.Sec:
+    repos:
+      github.com/cessda/cessda.ai.mcp.openaire bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.cadet_apprehensive_pegasus.sh
+        container: qc.sec_tangerine_loving_otter
+  QC.Sty:
+    repos:
+      github.com/cessda/cessda.ai.mcp.openaire flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.emerald_mysterious_eel.sh
+        container: qc.sty_ruby_spontaneous_crow
+      github.com/cessda/cessda.ai.mcp.openaire hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.storm_imaginative_pangolin.sh
+        container: qc.sty_jasmine_clever_caiman
+      github.com/cessda/cessda.ai.mcp.openaire jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.obsidian_cheerful_owl.sh
+        container: qc.sty_cinnamon_eager_grasshopper
+  QC.Uni:
+    repos:
+      github.com/cessda/cessda.ai.mcp.openaire pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.glacier_funny_impala.sh
+        container: qc.uni_fandango_vibrant_quoll
+  QC.Ver:
+    repos:
+      github.com/cessda/cessda.ai.mcp.openaire get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.khaki_unique_mandrill.sh
+        container: qc.ver_persimmon_sympathetic_chameleon
+timeout: 5400
